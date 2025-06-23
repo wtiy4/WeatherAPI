@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather API</title>
+  </head>
+  <body>
+    <form class="weatherForm">
+      <input
+        type="text"
+        class="cityInput"
+        placeholder="Enter city (optional)"
+      />
+      <input
+        type="number"
+        step="any"
+        class="latInput"
+        placeholder="Latitude (21.5169)"
+      />
+      <input
+        type="number"
+        step="any"
+        class="lonInput"
+        placeholder="Longitude (39.2192)"
+      />
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <div class="card"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
