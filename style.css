@@ -3,19 +3,13 @@ body {
   background-color: hsl(0, 0%, 95%);
   margin: 0;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  background: #000428; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #000428,
-    #004e92
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #000428,
-    #004e92
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url("gradient.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .weatherForm {
@@ -55,8 +49,8 @@ button[type="submit"]:hover {
 .card {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 80%;
+  transform: translate(-50%, -80%);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);

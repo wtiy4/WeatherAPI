@@ -6,12 +6,26 @@ const card = document.querySelector(".card");
 
 const apiKey = "f3b01bc3e1075339f7ffd33771bcec9c";
 
+let userPosition = null;
+
+const success = (position) => {
+  console.log(position);
+  userPosition = position;
+};
+
+const fail = (err) => {
+  console.log(err);
+};
+
+navigator.geolocation.getCurrentPosition(success, fail);
 weatherForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const city = cityInput.value.trim();
-  const lat = latInput.value.trim();
-  const lon = lonInput.value.trim();
+  const lat =
+    latInput.value.trim() || (userPosition && userPosition.coords.latitude);
+  const lon =
+    lonInput.value.trim() || (userPosition && userPosition.coords.longitude);
 
   try {
     let weatherData;
